@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-//const db = require('./db')
+const db = require('./dbFunctions')
 
 
 
@@ -17,7 +17,7 @@ router.get('/allMyths',(req,res)=>{
 
     db.getAllMyths()
     .then(myths => {
-        return res.render('index', { myths: myths })
+        return res.render('allMyths', { myths: myths })
       })
 
    
@@ -28,12 +28,13 @@ router.get('/mythsByRegion/:id', (req,res)=>{
 
     db.getMythByRegion(req.params.id)
     .then(region =>{
+        console.log(region)
         const viewData ={
-            region
+            region: region,
+            name: region[0].name
         }
         res.render('mythsByRegion', viewData)
     })
-
 })
 
 
