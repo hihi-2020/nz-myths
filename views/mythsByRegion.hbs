@@ -1,7 +1,7 @@
-<h1>{{region}} Myths</h1>
+<h1>{{name}} Myths</h1>
 
 <ul>
-    {{#each}}
+    {{#each region}}
     <li><a href="./{{id}}">{{title}}</a></li>
     <br>
     {{/each}}
@@ -9,5 +9,5 @@
 
 {{!-- Stretch? --}}
 <div>
-    <p>More information on <a href="{{!link to wiki for the region}}">{{region}}</a></p>
+    <p>More information on <a href="{{!link to wiki for the region}}">{{title}}</a></p>
 </div>
