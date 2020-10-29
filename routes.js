@@ -49,6 +49,14 @@ router.get('/oneMyth/:id', (req,res)=>{
     })
 })
 
+
+router.get('/addMyth', (req,res)=>{
+
+   res.render('addMyth')
+})
+
+
+
 router.post('/newMyth', (req, res)=>{
 
     db.addMyth()
