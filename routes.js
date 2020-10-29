@@ -55,14 +55,15 @@ router.get('/addMyth', (req,res)=>{
 
 
 
-// router.post('/newMyth', (req, res)=>{
+router.post('/newMyth', (req, res)=>{
+    const myth = req.body
+    console.log(myth)
+    db.addMyth(myth)
+    .then(()=> {
+           res.redirect('/')
+    })
 
-//     db.addMyth()
-//     .then
-
-//     res.redirect('/')
-
-// } )
+} )
 
 
 //  router.post('/')

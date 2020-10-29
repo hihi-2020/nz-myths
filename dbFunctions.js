@@ -19,7 +19,7 @@ function getMythByRegion(id, db = connection){
   return db('myths')
   .join ('regions', 'myths.region_id',  'regions.id')
   .select('*','myths.id as id')
-  .where('myths.id', id)
+  .where('region_id', id)
 }
 
 
@@ -31,12 +31,16 @@ function getOneMyth(id, db = connection){
   .first()
 }
 
+function addMyth(myth, db = connection){
 
-
+  return db('myths')
+  .insert(myth)
+}
 
 
 module.exports = {
   getAllMyths,
   getMythByRegion,
-  getOneMyth
+  getOneMyth,
+  addMyth
 }
