@@ -12,6 +12,9 @@ function getAllMyths(db = connection){
   .select()
 }
 
+
+
+
 function getMythByRegion(id, db = connection){
   return db('myths')
   .join ('regions', 'myths.region_id',  'regions.id')
@@ -19,9 +22,16 @@ function getMythByRegion(id, db = connection){
   .where('myths.id', id)
 }
 
+
+
 function getOneMyth(id, db = connection){
-  return db('myths').select().where('id', id).first()
+  return db('myths')
+  .where('id', id)
+  .select()
+  .first()
 }
+
+
 
 
 

@@ -28,7 +28,6 @@ router.get('/mythsByRegion/:id', (req,res)=>{
 
     db.getMythByRegion(req.params.id)
     .then(region =>{
-        console.log(region)
         const viewData ={
             region: region,
             name: region[0].name
@@ -42,10 +41,9 @@ router.get('/oneMyth/:id', (req,res)=>{
 
     db.getOneMyth(req.params.id)
     .then(oneMyth =>{
-        const viewData ={
-            oneMyth
-        }
-        res.render('oneMyth', viewData)
+        console.log(oneMyth)
+       
+        res.render('oneMyth', oneMyth)
     })
 })
 
@@ -57,15 +55,14 @@ router.get('/addMyth', (req,res)=>{
 
 
 
-router.post('/newMyth', (req, res)=>{
+// router.post('/newMyth', (req, res)=>{
 
-    db.addMyth()
-    .then 
+//     db.addMyth()
+//     .then
 
+//     res.redirect('/')
 
-    res.redirect('/')
-
-} )
+// } )
 
 
 //  router.post('/')
