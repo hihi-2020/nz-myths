@@ -1,5 +1,37 @@
 <h1>Add Myth</h1>
 
-<form>
+<form action="/newMyth" method="POST" id="addMyth">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title"><br>
     
+    <label for="region">Region:</label><br>
+    <select name="region">
+        <option value = "101" selected>Northland</option>
+        <option value = "102">Auckland</option>
+        <option value = "103">Waikato</option>
+        <option value = "104">Bay of Plenty</option>
+        <option value = "105">Gisborne</option>
+        <option value = "106">Hawkes Bay</option>
+        <option value = "107">Manawatu-Wanganui</option>
+        <option value = "108">Taranaki</option>
+        <option value = "109">Wellington</option>
+        <option value = "110">Nelson</option>
+        <option value = "111">Marlborough</option>
+        <option value = "112">Tasman</option>
+        <option value = "113">West Coast</option>
+        <option value = "114">Canterbury</option>
+        <option value = "115">Otago</option>
+        <option value = "116">Southland</option>
+
+    </select><br>
+
+    <label for="content">Myth Details/Description:</label><br>
+    <textarea id="content" name="content" rows="10" cols="50"
+    
+    <input type="text" id="content" name="content"><br>
+
+    <button type="submit" form="addMyth" value="Submit">Submit</button>
+
 </form>
+
+method /newMyth
