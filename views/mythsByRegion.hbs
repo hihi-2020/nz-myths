@@ -1,1 +1,13 @@
-<h1>Myths By Region</h1>
+<h1>{{region}} Myths</h1>
+
+<ul>
+    {{#each}}
+    <li><a href="./{{id}}">{{title}}</a></li>
+    <br>
+    {{/each}}
+</ul>
+
+{{!-- Stretch? --}}
+<div>
+    <p>More information on <a href="{{!link to wiki for the region}}">{{region}}</a></p>
+</div>
