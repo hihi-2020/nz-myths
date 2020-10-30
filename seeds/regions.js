@@ -1,6 +1,11 @@
-exports.seed = function (knex, Promise) {
-    return knex('regions').insert([
-      { id: 101, name:'Northland' },
+
+exports.seed = function(knex) {
+  // Deletes ALL existing entries
+  return knex('regions').del()
+    .then(function () {
+      // Inserts seed entries
+      return knex('regions').insert([
+        { id: 101, name:'Northland' },
       { id: 102, name:'Auckland' },
       { id: 103, name:'Waikato' },
       { id: 104, name:'Bay of Plenty' },
@@ -16,5 +21,9 @@ exports.seed = function (knex, Promise) {
       { id: 114, name:'Canterbury' },
       { id: 115, name:'Otago' },
       { id: 116, name:'Southland' },
-    ])
-  }
+
+
+
+      ]);
+    });
+};
