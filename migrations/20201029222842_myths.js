@@ -3,8 +3,8 @@ exports.up = (knex, Promise) => {
       table.increments('id').primary()
       table.integer('region_id')
       table.string('title')
-      table.string('content')
-      table.string('imageLink')
+      table.string('content', 5000)
+      table.string('imageLink', 5000)
 
     })
   }
