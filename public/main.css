@@ -1,5 +1,6 @@
 body {
   font-family: 'Syne Mono', monospace;
+  background-color: greenyellow;
 
 }
 
@@ -10,4 +11,25 @@ a {color: inherit;}
 
   background-image:url("https://media1.s-nbcnews.com/j/newscms/2019_13/2459586/180608-aliens-fermi-paradox-ac-515p_3ed014cab156ff9319f4d52ee5242b89.fit-760w.jpg") ;
 
+}
+
+
+#main-title{
+color: greenyellow
+
+}
+
+
+.body-image{
+  color: rgb(207, 10, 207);
+}
+
+
+.footer-style{
+background-image: url("https://m.hindustantimes.com/rf/image_size_444x250/HT/p2/2020/07/12/Pictures/_0392a302-c3a6-11ea-991f-d77957054eff.png");
+}
+
+
+#footer-words{
+  color: greenyellow
 }
